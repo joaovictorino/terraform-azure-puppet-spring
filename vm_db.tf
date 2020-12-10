@@ -82,6 +82,7 @@ resource "null_resource" "deploy_db" {
         inline = [
             "sudo apt-get update",
             "sudo apt-get install -y puppet",
+            "sudo puppet apply /home/azureuser/mysql/mysql.pp",
         ]
     }
 }
