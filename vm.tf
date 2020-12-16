@@ -90,7 +90,7 @@ resource "null_resource" "deploy" {
         }
         inline = [
             "sudo apt-get update",
-            "sudo apt-get install -y puppet",
+            "sudo apt-get install -y puppet=5.4.0-2ubuntu3",
             "sudo puppet apply /home/azureuser/springapp/springapp.pp",
         ]
     }
