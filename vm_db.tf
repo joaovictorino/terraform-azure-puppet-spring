@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "storage_aula_db" {
-    name                        = "storageauladb"
+    name                        = "storageauladbuppet"
     resource_group_name         = azurerm_resource_group.rg_aula.name
     location                    = var.location
     account_tier                = "Standard"
@@ -65,7 +65,7 @@ resource "null_resource" "upload_db" {
         destination = "/home/azureuser"
     }
 
-    depends_on = [ time_sleep.wait_30_seconds ]
+    depends_on = [ time_sleep.wait_30_seconds_db ]
 }
 
 resource "null_resource" "deploy_db" {

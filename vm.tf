@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg_aula" {
-    name     = "myResourceGroup"
+    name     = "myResourceGroupPuppet"
     location = var.location
 
     tags = {
